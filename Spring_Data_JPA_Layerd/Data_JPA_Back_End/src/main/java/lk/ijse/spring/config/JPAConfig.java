@@ -2,6 +2,7 @@ package lk.ijse.spring.config;
 
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.repo.ItemRepo;
+import lk.ijse.spring.repo.OrderDetailsRepo;
 import lk.ijse.spring.repo.OrdersRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +21,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement // AOP Usage
-@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class, ItemRepo.class, OrdersRepo.class})
+@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class, ItemRepo.class, OrdersRepo.class, OrderDetailsRepo.class})
 public class JPAConfig {
     public JPAConfig() {
         System.out.println("JPAConfig : Instantiated..!");
